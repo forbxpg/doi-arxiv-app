@@ -1,0 +1,32 @@
+[project]
+name = "server"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "forbxpg",email = "dwizard80@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp (>=3.13.0,<4.0.0)",
+    "fastapi (>=0.118.0,<0.119.0)",
+    "pydantic (>=2.11.10,<3.0.0)",
+    "sqlalchemy (>=2.0.43,<3.0.0)",
+    "pydantic-settings (>=2.11.0,<3.0.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+packages = [
+    {"include" = "server"},
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.2"
+pytest-asyncio = "^1.2.0"
+ruff = "^0.13.3"
+pylint = "^3.3.9"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
