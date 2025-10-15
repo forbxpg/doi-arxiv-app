@@ -1,0 +1,18 @@
+{
+  "python.analysis.extraPaths": ["${workspaceFolder}/server"],
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.defaultInterpreterPath": "${workspaceFolder}/server/env/bin/python",
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["server/tests", "-v"],
+  "python.testing.cwd": "${workspaceFolder}/server",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    }
+  },
+  "ruff.lint.args": ["--config=${workspaceFolder}/server/pyproject.toml"],
+  "ruff.format.args": ["--config=${workspaceFolder}/server/pyproject.toml"]
+}
